@@ -1,0 +1,28 @@
+{
+  "name": "SsaDev",
+  "version": "1.0",
+  "description": "A Desktop New Tab",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "all_frames": true,
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "SsaDev"
+  },
+  "background": {
+    "scripts": []
+  }
+}

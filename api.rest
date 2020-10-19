@@ -1,0 +1,1 @@
+GET https://ssadev.github.io/myjsondbs/ssdev.json
