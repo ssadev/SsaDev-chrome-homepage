@@ -29,6 +29,10 @@ export default class Main extends React.Component {
     window.location = url;
   };
   componentDidMount = () => {
+    let items = localStorage.getItem('items')
+    items = JSON.parse(items)
+    console.log(items)
+    this.setState({ items: items });
     // console.log("object");
     const options = {
       method: "GET",
