@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout, Col, Row, Input } from "antd";
-import { GoogleOutlined } from "@ant-design/icons";
+import { GoogleOutlined, SecurityScanOutlined } from "@ant-design/icons";
 import axios from "axios";
 
 import SingleCard from "./SingleCard";
@@ -25,7 +25,7 @@ export default class Main extends React.Component {
     });
   };
   SearchOnGoogle = (q) => {
-    let url = "https://www.google.com/search?q=" + q;
+    let url = "https://duckduckgo.com/?q=" + q;
     window.location = url;
   };
   componentDidMount = () => {
@@ -81,7 +81,7 @@ export default class Main extends React.Component {
           >
             <Search
               placeholder="Search On Google"
-              prefix={<GoogleOutlined className="site-form-item-icon" />}
+              prefix={<SecurityScanOutlined className="site-form-item-icon" />}
               onSearch={(value) => this.SearchOnGoogle(value)}
               size="large"
               enterButton
